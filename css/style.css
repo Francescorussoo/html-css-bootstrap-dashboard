@@ -5,14 +5,34 @@
 header {
   height: var(--header-height);
 }
-header img:first-child {
+header img:first-of-type {
   height: 50px;
 }
-main img {
-  width: 30px;
-} 
+main {
+  height: calc(100vh - var(--header-height));
+}
 aside {
   width: var(--aside-width);
   background-color: #061E34;
   background-image: url(../img/sidebar-bg.png);
+}
+.my-btn-aside:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+#central-section {
+  width: calc(100% - var(--aside-width));
+}
+.me-2 {
+  max-width: 30px;
+}
+.btn-outline-secondary {
+  font-size: 0.875rem;
+}
+.table, .form-check-label, .accordion-button, .accordion-body, .card-text, .list-group-item, .card-link {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 992px) {
+  :root {
+      --aside-width: 140px;
+  }
 }
